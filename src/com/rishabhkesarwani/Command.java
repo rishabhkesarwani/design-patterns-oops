@@ -4,34 +4,31 @@ import java.util.ArrayList;
 
 public class Command {
 
+    private Action action;
+    private String argument;
+
     Command(String input) {
         String[] command = input.split(" ");
         if (command.length == 2) {
-            String argument = command[1];
+            argument = command[1];
             switch (command[0]) {
                 case "search":
-                    SearchAction searchAction = new SearchAction();
-                    //Appropriate method to call from above object
+                    action = new SearchAction();
                     break;
                 case "select":
-                    SelectAction selectAction = new SelectAction();
-                    //Appropriate method to call from above object
+                    action = new SelectAction();
                     break;
                 case "add":
-                    AddCartAction addCartAction = new AddCartAction();
-                    //Appropriate method to call from above object
+                    action = new AddCartAction();
                     break;
                 case "order":
-                    OrderAction orderAction = new OrderAction();
-                    //Appropriate method to call from above object
+                    action = new OrderAction();
                     break;
                 case "cancel":
-                    CancelAction cancelAction = new CancelAction();
-                    //Appropriate method to call from above object
+                    action = new CancelAction();
                     break;
                 case "pay":
-                    PayAction payAction = new PayAction();
-                    //Appropriate method to call from above object
+                    action = new PayAction();
                     break;
                 default:
                     System.out.println("give a valid command");
@@ -39,6 +36,14 @@ public class Command {
         } else {
             System.out.println("give a valid command");
         }
+    }
+
+    public void execute() {
+        action.perform(argument);
+    }
+
+    public ArrayList<String> response() {
+        return action.response();
     }
 
 }

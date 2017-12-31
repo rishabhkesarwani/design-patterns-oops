@@ -22,7 +22,10 @@ public class UpDelivery {
                 String line = input.nextLine();
                 if (!line.equals("exit")) {
                     Command command = new Command(line);
-                    //We need implement response methods also which can let us know what was the response after executing that action.
+                    command.execute();
+                    for (String response: command.response()) {
+                        System.out.println(response);
+                    }
                 } else {
                     input.close();
                     break;
