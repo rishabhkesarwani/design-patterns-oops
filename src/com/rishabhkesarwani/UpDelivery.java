@@ -21,16 +21,8 @@ public class UpDelivery {
             if (input.hasNextLine()) {
                 String line = input.nextLine();
                 if (!line.equals("exit")) {
-                    if (line.contains("search")) {
-                        // for loop which checks which store name is contained in the line
-                    } else if (line.contains("select")) {
-                        // for loop which checks which store name is contained in the line
-                    } else if (line.contains("add")) {
-                        // for loop which checks which item name is contained in the line
-                    } else if (line.contains("order")) {
-                        //...
-                    }
-                    //...
+                    Command command = new Command(line);
+                    //We need implement response methods also which can let us know what was the response after executing that action.
                 } else {
                     input.close();
                     break;
