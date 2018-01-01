@@ -7,26 +7,11 @@ class TanishaStore implements Store {
     private ArrayList<Item> itemsSelling = new ArrayList<>();
 
     public TanishaStore() {
-        Mobile mobile1 = new Mobile();
-        mobile1.setName("iPhone6");
-        mobile1.setPrice(6000);
-        mobile1.setBrand("Apple");
-        itemsSelling.add(mobile1);
-        Laptop laptop1 = new Laptop();
-        laptop1.setName("HPZ");
-        laptop1.setPrice(1000);
-        laptop1.setHardDiskSize(250);
-        itemsSelling.add(laptop1);
-        Mobile mobile2 = new Mobile();
-        mobile2.setName("iPhone7");
-        mobile2.setPrice(7000);
-        mobile2.setBrand("Apple");
-        itemsSelling.add(mobile2);
-        Laptop laptop2 = new Laptop();
-        laptop2.setName("Lenovo");
-        laptop2.setPrice(2000);
-        laptop2.setHardDiskSize(500);
-        itemsSelling.add(laptop2);
+        ItemBuilder itemBuilder = new ItemBuilder();
+        itemsSelling.add(itemBuilder.makeMobile("iPhone6", 6000, "Apple"));
+        itemsSelling.add(itemBuilder.makeLaptop("HPZ", 1000, 250));
+        itemsSelling.add(itemBuilder.makeMobile("iPhone7", 7000, "Apple"));
+        itemsSelling.add(itemBuilder.makeLaptop("Lenovo", 2000, 500));
     }
 
     @Override
