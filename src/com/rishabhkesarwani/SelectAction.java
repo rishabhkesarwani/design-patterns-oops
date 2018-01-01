@@ -13,7 +13,11 @@ public class SelectAction implements Action {
 
     @Override
     public void perform() {
-
+        StoreListing storeListing = StoreListing.getInstance();
+        storeListing.setSelectedStore(argument);
+        for (Item item: storeListing.getSelectedStore().getItemsSelling()) {
+            response.add(item.getName());
+        }
     }
 
     @Override

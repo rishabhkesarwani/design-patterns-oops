@@ -13,7 +13,11 @@ public class SearchAction implements Action {
 
     @Override
     public void perform() {
-
+        for (Store store : StoreListing.getInstance().getStoreList()) {
+            if (store.getName().matches(argument + "(.*)")) {
+                response.add(store.getName());
+            }
+        }
     }
 
     @Override
