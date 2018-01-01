@@ -2,7 +2,7 @@ package com.rishabhkesarwani;
 
 import java.util.ArrayList;
 
-public interface Store {
+public interface Store extends Searchable {
 
     public String getName();
 

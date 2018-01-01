@@ -2,7 +2,7 @@ package com.rishabhkesarwani;
 
 import java.util.ArrayList;
 
-public class StoreListing {
+public class StoreListing implements Searchable {
 
     private static StoreListing onlyInstance = null;
 
@@ -44,5 +44,14 @@ public class StoreListing {
         if (storeList.indexOf(s) == -1) {
             storeList.add(s);
         }
+    }
+
+    @Override
+    public ArrayList<String> getSearcher() {
+        ArrayList<String> searcher = new ArrayList<>();
+        for (Store store: storeList) {
+            searcher.add(store.getName());
+        }
+        return searcher;
     }
 }

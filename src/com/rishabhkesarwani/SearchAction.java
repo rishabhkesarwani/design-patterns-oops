@@ -13,9 +13,9 @@ public class SearchAction implements Action {
 
     @Override
     public void perform() {
-        for (Store store : StoreListing.getInstance().getStoreList()) {
-            if (store.getName().matches(argument + "(.*)")) {
-                response.add(store.getName());
+        for (String storeName : StoreListing.getInstance().getSearcher()) {
+            if (storeName.matches(argument + "(.*)")) {
+                response.add(storeName);
             }
         }
     }

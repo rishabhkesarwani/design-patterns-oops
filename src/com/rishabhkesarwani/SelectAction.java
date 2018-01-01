@@ -15,9 +15,7 @@ public class SelectAction implements Action {
     public void perform() {
         StoreListing storeListing = StoreListing.getInstance();
         storeListing.setSelectedStore(argument);
-        for (Item item: storeListing.getSelectedStore().getItemsSelling()) {
-            response.add(item.getName());
-        }
+        response.addAll(storeListing.getSelectedStore().getSearcher());
     }
 
     @Override

@@ -34,4 +34,12 @@ public class SikingStore implements Store {
         return itemsSelling;
     }
 
+    @Override
+    public ArrayList<String> getSearcher() {
+        ArrayList<String> searcher = new ArrayList<>();
+        for (Item item: itemsSelling) {
+            searcher.add(item.getName());
+        }
+        return searcher;
+    }
 }
