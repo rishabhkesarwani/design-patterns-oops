@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface Action {
 
-    public void perform(String argument);
+    public void perform();
 
     public ArrayList<String> response();
 

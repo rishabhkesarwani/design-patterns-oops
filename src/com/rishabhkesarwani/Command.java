@@ -1,34 +1,30 @@
 package com.rishabhkesarwani;
 
-import java.util.ArrayList;
-
 public class Command {
 
-    private Action action;
-    private String argument;
-
-    Command(String input) {
+    public Action interpret(String input) {
         String[] command = input.split(" ");
+        Action action = null;
         if (command.length == 2) {
-            argument = command[1];
+            String argument = command[1];
             switch (command[0]) {
                 case "search":
-                    action = new SearchAction();
+                    action = new SearchAction(argument);
                     break;
                 case "select":
-                    action = new SelectAction();
+                    action = new SelectAction(argument);
                     break;
                 case "add":
-                    action = new AddCartAction();
+                    action = new AddCartAction(argument);
                     break;
                 case "order":
-                    action = new OrderAction();
+                    action = new OrderAction(argument);
                     break;
                 case "cancel":
-                    action = new CancelAction();
+                    action = new CancelAction(argument);
                     break;
                 case "pay":
-                    action = new PayAction();
+                    action = new PayAction(argument);
                     break;
                 default:
                     System.out.println("give a valid command");
@@ -36,14 +32,7 @@ public class Command {
         } else {
             System.out.println("give a valid command");
         }
-    }
-
-    public void execute() {
-        action.perform(argument);
-    }
-
-    public ArrayList<String> response() {
-        return action.response();
+        return action;
     }
 
 }
