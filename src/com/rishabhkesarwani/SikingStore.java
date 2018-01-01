@@ -6,6 +6,8 @@ public class SikingStore implements Store {
 
     private ArrayList<Item> itemsSelling = new ArrayList<>();
 
+    private Order order = new Order();
+
     public SikingStore() {
         ItemBuilder itemBuilder = new ItemBuilder();
         itemsSelling.add(itemBuilder.makeMobile("MotorolaG4", 5000, "Motorola"));
@@ -21,17 +23,31 @@ public class SikingStore implements Store {
 
     @Override
     public void returnItem(Item item) {
+        order.removeItem(item);
         itemsSelling.add(item);
     }
 
     @Override
     public void sellItem(Item item) {
         itemsSelling.remove(item);
+        order.addItem(item);
     }
 
     @Override
     public ArrayList<Item> getItemsSelling() {
         return itemsSelling;
+    }
+
+    @Override
+    public void cancelOrder() {
+        for (Item item: order.getAllItems()) {
+            returnItem(item);
+        }
+    }
+
+    @Override
+    public Order getOrder() {
+        return order;
     }
 
     @Override

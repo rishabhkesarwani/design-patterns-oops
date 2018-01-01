@@ -13,7 +13,12 @@ public class PayAction implements Action {
 
     @Override
     public void perform() {
-
+        int amountPaid = Integer.parseInt(argument);
+        if (amountPaid < Cart.getInstance().getTotalAmount()) {
+            response.add("Please pay full amount");
+        } else {
+            response.add("Your Payment is successful!");
+        }
     }
 
     @Override

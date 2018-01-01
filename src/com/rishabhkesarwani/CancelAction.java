@@ -13,7 +13,12 @@ public class CancelAction implements Action{
 
     @Override
     public void perform() {
-
+        if (argument.equals("order")) {
+            Cart.getInstance().cancel();
+            response.add("Order Cancelled");
+        } else {
+            response.add("cancel what?");
+        }
     }
 
     @Override

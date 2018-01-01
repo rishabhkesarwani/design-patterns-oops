@@ -12,4 +12,7 @@ public interface Store extends Searchable {
 
     public ArrayList<Item> getItemsSelling();
 
+    public void cancelOrder();
+
+    public Order getOrder();
 }
