@@ -20,8 +20,7 @@ public class UpDelivery {
         while(true) {
             if (input.hasNextLine()) {
                 String line = input.nextLine();
-                Command command = new Command();
-                Action action = command.interpret(line);
+                Action action = Command.interpret(line);
                 if (!line.equals("exit") && action != null) {
                     action.perform();
                     for (String response: action.response()) {

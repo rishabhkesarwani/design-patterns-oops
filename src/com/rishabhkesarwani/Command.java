@@ -2,7 +2,7 @@ package com.rishabhkesarwani;
 
 public class Command {
 
-    public Action interpret(String input) {
+    public static Action interpret(String input) {
         String[] command = input.split(" ");
         Action action = null;
         if (command.length == 2) {
