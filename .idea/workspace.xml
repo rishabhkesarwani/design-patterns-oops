@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5c0e75e-a309-4d68-b778-dec02927130a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/rishabhkesarwani/ItemBuilder.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/rishabhkesarwani/StoreListing.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/rishabhkesarwani/SikingStore.java" afterPath="$PROJECT_DIR$/src/com/rishabhkesarwani/SikingStore.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/rishabhkesarwani/TanishaStore.java" afterPath="$PROJECT_DIR$/src/com/rishabhkesarwani/TanishaStore.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SikingStore.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SikingStore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/rishabhkesarwani/SikingStore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="208">
               <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreListing.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/rishabhkesarwani/StoreListing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -145,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/com/rishabhkesarwani/ItemBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/rishabhkesarwani/SikingStore.java" />
         <option value="$PROJECT_DIR$/src/com/rishabhkesarwani/TanishaStore.java" />
+        <option value="$PROJECT_DIR$/src/com/rishabhkesarwani/StoreListing.java" />
       </list>
     </option>
   </component>
@@ -513,6 +522,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/rishabhkesarwani/StoreListing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
